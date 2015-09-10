@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
+        title= title
+        block css
+            link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+            link(rel='stylesheet', href='/bower_components/font-awesome/css/font-awesome.min.css')
+            link(rel='stylesheet', href='/styles/main.css')
+    body
+        block content
+
+        block js
+            script(src="/bower_components/jquery/dist/jquery.min.js")
+            script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+            script(src="js/main.js")
