@@ -14,7 +14,6 @@ var methodOverride = require('method-override');
 var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
-var passport = require('passport');
 var config = require('./environment');
 
 module.exports = function (app) {
@@ -30,7 +29,6 @@ module.exports = function (app) {
     app.use(methodOverride());
     app.use(cookieParser());
 
-    app.use(passport.initialize());
     app.use(session({
         secret: config.secrets.session,
         resave: true,

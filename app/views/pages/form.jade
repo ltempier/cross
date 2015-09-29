@@ -1,0 +1,13 @@
+extends ../layout
+block content
+    .container
+        form#question-form
+            .panel.panel-default
+                .panel-body
+                    #question-list
+                .panel-footer
+                    .clearfix
+                        button.btn.btn-default#add-line(type="button") +
+                        button.btn.btn-success.pull-right(type="submit") Submit
+block js
+    script(src="js/form.js")
